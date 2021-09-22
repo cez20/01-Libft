@@ -1,36 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cemenjiv <marvin@42quebec.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/16 14:26:04 by cemenjiv          #+#    #+#             */
-/*   Updated: 2021/09/22 15:57:33 by cemenjiv         ###   ########.fr       */
+/*   Created: 2021/09/22 15:57:58 by cemenjiv          #+#    #+#             */
+/*   Updated: 2021/09/22 16:38:25 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdio.h>
 
-void	*ft_memset(void *b, int c, size_t len)
+void	*ft_memchr(void *s, int c, size_t n)
 {
+	size_t i;
 	unsigned char *ptr;
 
-	ptr = (unsigned char*)b;	
-	while (len > 0)
+	i = 0;
+	ptr = (unsigned char*)s;	
+	while (ptr[i] != '\0' && i <= n) 
 	{
-		*ptr++ = (unsigned char)c;
-		len--;
+		if (ptr[i] == c)
+			return (&ptr[i]);
+		i++;
 	}
-	return (b);
+	return (0);
 }
 
 int main()
 {
-	char a[50] = "Cesar";
+	char a[] = "Cesar";
 
-		
-	printf("%s\n", ft_memset(a ,'!', 3)); 
-//	printf("%s\n", memset(a ,'$', 3)); 
+	printf("%s\n", memchr(a, 'e', 3)); 
+	printf("%s\n", ft_memchr(a, 'e', 3)); 
 }
