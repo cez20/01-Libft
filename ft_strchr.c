@@ -6,14 +6,14 @@
 /*   By: cemenjiv <marvin@42quebec.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 13:20:30 by cemenjiv          #+#    #+#             */
-/*   Updated: 2021/09/22 14:53:17 by cemenjiv         ###   ########.fr       */
+/*   Updated: 2021/09/23 10:30:57 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 
-char	*ft_strchr(char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	int i;
 	int j;
@@ -23,10 +23,10 @@ char	*ft_strchr(char *s, int c)
 	while (i <= j)
 	{
 		if (s[i] == c)
-			return (&s[i]);
+			return ((char*)&s[i]);
 		i++;
     }
-	return (0);
+	return (NULL);
 }
 
 int main()
@@ -44,7 +44,7 @@ int main()
 	printf("La vraie fonction strchr donne -------> %s\n",strchr(a, '\0'));
 	printf("MA fonction strchr donne -------> %s\n",ft_strchr(a, '\0'));
 	printf("\n");
-	printf("La vraie fonction strchr donne -------> %s\n",strchr(a, '0'));
-	printf("MA fonction strchr donne -------> %s\n",ft_strchr(a, '0'));
+	printf("La vraie fonction strchr donne -------> %s\n",strchr(a, '1'));
+	printf("MA fonction strchr donne -------> %s\n",ft_strchr(a, '1'));
 	printf("\n");
 }
