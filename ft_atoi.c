@@ -6,15 +6,12 @@
 /*   By: cemenjiv <marvin@42quebec.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/24 11:45:23 by cemenjiv          #+#    #+#             */
-/*   Updated: 2021/09/24 12:18:04 by cemenjiv         ###   ########.fr       */
+/*   Updated: 2021/09/26 20:06:50 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+//"include "stdlib.h"
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdio.h>
-
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int	i;
 	int	number;
@@ -30,16 +27,3 @@ int	ft_atoi(char *str)
 	}
 	return (number);
 }
-int main()
-{
- 	char a[] = "---+1234ab567";
- 	char b[] = "aa98";
-    char c[] = "98  76";
-	char d[] = "		1234";
-
-     printf("%d\n",ft_atoi(a));
-     printf("%d\n",ft_atoi(b));
-     printf("%d\n",ft_atoi(c));
-     printf("%d\n",ft_atoi(d));
-}
-

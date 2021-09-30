@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/22 13:52:52 by cemenjiv          #+#    #+#             */
-/*   Updated: 2021/09/29 11:57:34 by cemenjiv         ###   ########.fr       */
+/*   Created: 2021/09/28 10:43:26 by cemenjiv          #+#    #+#             */
+/*   Updated: 2021/09/29 21:40:03 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h" 
+// Est-ce que le nouveau string doit absolument contenir le nul-terminating '\0'
+// include ici-bas sera a enlevé et changer fonction strlcpy par ft_strlcpy
 
-char	*ft_strrchr(const char *s, int c)
+#include "libft.h"
+
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	int	i;
+	char	*ptr;
 
-	i = ft_strlen(s) + 1;
-	while (i--)
-	{
-		if (s[i] == c)
-			return ((char *)&s[i]);
-	}
-	return (NULL);
+	ptr = (char *)malloc((len + 1) * sizeof(*ptr));
+	if (!ptr)
+		return (NULL);
+	ft_strlcpy (ptr, (s + start), len + 1);
+	return (ptr);
 }

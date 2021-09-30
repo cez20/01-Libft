@@ -1,21 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   main_ft_strjoin.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cemenjiv <marvin@42quebec.com>             +#+  +:+       +#+        */
+/*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/15 14:34:48 by cemenjiv          #+#    #+#             */
-/*   Updated: 2021/09/27 12:08:37 by cemenjiv         ###   ########.fr       */
+/*   Created: 2021/09/28 21:03:10 by cemenjiv          #+#    #+#             */
+/*   Updated: 2021/09/28 21:03:39 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-int	ft_isdigit(int c)
+int main()
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	else
-		return (0);
+	char a[] =  "Cesar";
+	char b[] = "Menjivar";
+
+	printf("%s\n", ft_strjoin(a, b));
 }

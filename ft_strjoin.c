@@ -1,26 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/22 13:52:52 by cemenjiv          #+#    #+#             */
-/*   Updated: 2021/09/29 11:57:34 by cemenjiv         ###   ########.fr       */
+/*   Created: 2021/09/28 13:17:27 by cemenjiv          #+#    #+#             */
+/*   Updated: 2021/09/29 12:04:00 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h" 
+#include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int	i;
+	char	*ptr;
+	int		i;
+	int		j;
+	int		len;
 
-	i = ft_strlen(s) + 1;
-	while (i--)
+	i = 0;
+	j = 0;
+	len = ft_strlen(s1) + ft_strlen(s2) + 1;
+	ptr = (char *)malloc(len * sizeof(char));
+	if (!ptr)
+		return (NULL);
+	while (s1[i] != '\0')
 	{
-		if (s[i] == c)
-			return ((char *)&s[i]);
+		ptr[i] = s1[i];
+		i++;
 	}
-	return (NULL);
+	while (s2[j] != '\0')
+	{
+		ptr[i] = s2[j];
+		i++;
+		j++;
+	}
+	ptr[i] = '\0';
+	return (ptr);
 }

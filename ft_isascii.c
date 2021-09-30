@@ -6,14 +6,13 @@
 /*   By: cemenjiv <marvin@42quebec.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 15:39:05 by cemenjiv          #+#    #+#             */
-/*   Updated: 2021/09/16 10:51:11 by cemenjiv         ###   ########.fr       */
+/*   Updated: 2021/09/25 17:36:18 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <ctype.h>
+//#include "libft.h"
 
-int	ft_isascii (int c)
+int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)
 		return (1);

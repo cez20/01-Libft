@@ -6,16 +6,13 @@
 /*   By: cemenjiv <marvin@42quebec.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 15:49:49 by cemenjiv          #+#    #+#             */
-/*   Updated: 2021/09/16 10:52:04 by cemenjiv         ###   ########.fr       */
+/*   Updated: 2021/09/25 17:36:44 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <ctype.h>
-
-int	ft_isprint (int c)
+int	ft_isprint(int c)
 {
-	if (c >= 32 && c <= 127)
+	if (c >= 32 && c <= 126)
 		return (1);
 	else
 		return (0);

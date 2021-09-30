@@ -1,68 +1,28 @@
-#include <stdio.h>
-#include <string.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cemenjiv <marvin@42quebec.com>             +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/25 18:33:50 by cemenjiv          #+#    #+#             */
+/*   Updated: 2021/09/26 20:01:59 by cemenjiv         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int ft_strncmp(char *s1, char *s2, unsigned int n)
+//#include "libft.h"
+#include <stdlib.h>
+
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	unsigned int i;
+	size_t	i;
 
 	i = 0;
 	while ((s1[i] || s2[i]) && i < n)
 	{
-		if(s1[i] != s2[i])
+		if (s1[i] != s2[i])
 			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 		i++;
 	}
 	return (0);
-}
-
-
-typedef struct    s_testcase{
-    char        *s1;
-    char        *s2;
-    int            len;
-}                t_testcase;
-
-int                ft_strncmp(char *s1, char *s2, unsigned int n);
-
-t_testcase        g_testcases[] = {
-    {"", "", 0},
-    {"", "", 8},
-    {"", "aaaaa", 8},
-    {"aaaaa", "", 8},
-    {"aaaaa", "", 0},
-    {"", "aaaaa", 0},
-    {"by", "bz", 1},
-    {"bb", "bb", 1000},
-    {"by", "az", 1},
-    {"by", "cz", 1},
-    {"by", "cz", 1000},
-    {"short long string", "short", 10},
-    {"short long string", "short", 5},
-    {"short", "short long string", 6},
-    {"The rain in Spain", "The rain in sPain", 0},
-    {"The rain in Spain", "The rain in sPain", 12},
-    {"The rain in Spain", "The rain in sPain", 13},
-};
-
-int                main(void)
-{
-    int i;
-    int result;
-    int stdlib;
-
-    i = 0;
-    while (i < (int)(sizeof(g_testcases) / sizeof(t_testcase)))
-    {
-        stdlib = strncmp(g_testcases[i].s1, g_testcases[i].s2,
-                g_testcases[i].len);
-        result = ft_strncmp(g_testcases[i].s1, g_testcases[i].s2,
-                g_testcases[i].len);
-        printf("strncmp('%s', '%s', %d)\n", g_testcases[i].s1,
-                g_testcases[i].s2, g_testcases[i].len);
-        printf("Lib: %d\nYou: %d\n", stdlib, result);
-        if (stdlib != result)
-            printf("FAIL\n");
-        i++;
-    }
-    return (0);
 }

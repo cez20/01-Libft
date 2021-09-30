@@ -3,48 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cemenjiv <marvin@42quebec.com>             +#+  +:+       +#+        */
+/*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/22 13:20:30 by cemenjiv          #+#    #+#             */
-/*   Updated: 2021/09/23 10:30:57 by cemenjiv         ###   ########.fr       */
+/*   Created: 2021/09/26 15:57:14 by cemenjiv          #+#    #+#             */
+/*   Updated: 2021/09/29 10:42:09 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+//#include "libft.h" 
 
 char	*ft_strchr(const char *s, int c)
 {
-	int i;
-	int j;
+	int	i;
 
+	if (!s)
+		return (0);
 	i = 0;
-	j = strlen(s);
-	while (i <= j)
+	while (s[i] != '\0')
 	{
-		if (s[i] == c)
-			return ((char*)&s[i]);
+		if (s[i] == (char)c)
+			return ((char *)&s[i]);
 		i++;
-    }
-	return (NULL);
-}
-
-int main()
-{
-	char a[] = "Cesar0Cesar";
-
-	printf("La chaine de caractères initiale est ------> Cesar0Cesar\n");
-	printf("\n");
-	printf("La vraie fonction strchr donne -------> %s\n",strchr(a, 'e'));
-	printf("MA fonction strchr donne -------> %s\n",ft_strchr(a, 'e'));
-	printf("\n");
-	printf("La vraie fonction strchr donne -------> %s\n",strchr(a, 'a'));
-	printf("MA fonction strchr donne -------> %s\n",ft_strchr(a, 'a'));
-	printf("\n");
-	printf("La vraie fonction strchr donne -------> %s\n",strchr(a, '\0'));
-	printf("MA fonction strchr donne -------> %s\n",ft_strchr(a, '\0'));
-	printf("\n");
-	printf("La vraie fonction strchr donne -------> %s\n",strchr(a, '1'));
-	printf("MA fonction strchr donne -------> %s\n",ft_strchr(a, '1'));
-	printf("\n");
+	}
+	if (s[i] == (char)c)
+		return ((char *)&s[i]);
+	return (0);
 }

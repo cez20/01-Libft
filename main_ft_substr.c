@@ -1,21 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   main_ft_substr.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cemenjiv <marvin@42quebec.com>             +#+  +:+       +#+        */
+/*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/15 14:34:48 by cemenjiv          #+#    #+#             */
-/*   Updated: 2021/09/27 12:08:37 by cemenjiv         ###   ########.fr       */
+/*   Created: 2021/09/28 11:46:27 by cemenjiv          #+#    #+#             */
+/*   Updated: 2021/09/29 21:40:53 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-int	ft_isdigit(int c)
+int main()
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	else
-		return (0);
+    char a[] = "Cesar est fatigue";
+
+    printf("%s\n", a);
+    printf("%s\n", ft_substr(a, 4, 10));
 }

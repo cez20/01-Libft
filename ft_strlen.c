@@ -6,20 +6,19 @@
 /*   By: cemenjiv <marvin@42quebec.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 11:23:55 by cemenjiv          #+#    #+#             */
-/*   Updated: 2021/09/15 14:13:17 by cemenjiv         ###   ########.fr       */
+/*   Updated: 2021/09/26 17:09:45 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+//#include "libft.h"
+#include <stdlib.h>
 
-unsigned long	ft_strlen(char *s)
+size_t	ft_strlen(const char *s)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
 	while (s[i] != '\0')
-	{
 		i++;
-	}
 	return (i);
 }

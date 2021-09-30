@@ -6,9 +6,11 @@
 /*   By: cemenjiv <marvin@42quebec.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 12:34:57 by cemenjiv          #+#    #+#             */
-/*   Updated: 2021/09/15 14:32:30 by cemenjiv         ###   ########.fr       */
+/*   Updated: 2021/09/27 12:08:24 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isalpha(int c)
 {
