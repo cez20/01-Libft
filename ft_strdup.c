@@ -6,13 +6,11 @@
 /*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/26 12:43:52 by cemenjiv          #+#    #+#             */
-/*   Updated: 2021/09/28 13:35:00 by cemenjiv         ###   ########.fr       */
+/*   Updated: 2021/10/01 12:43:47 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "libft.h"
-#include <string.h>
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_strdup(const char *s1)
 {

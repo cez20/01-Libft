@@ -1,30 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/20 16:41:36 by cemenjiv          #+#    #+#             */
-/*   Updated: 2021/10/01 11:52:58 by cemenjiv         ###   ########.fr       */
+/*   Created: 2021/10/01 09:57:13 by cemenjiv          #+#    #+#             */
+/*   Updated: 2021/10/01 12:42:24 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+static char ft_test(unsigned int i, char c)
 {
-	size_t	i;
-	char	*p_dst;
-	char	*p_src;
-
+	(void) i;
+		return (c);
+	
+}
+	
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+{
+	char *str;
+	int i;
+	
 	i = 0;
-	p_dst = (char *)dst;
-	p_src = (char *)src;
-	while (i < n)
+	if (!s)
+		return(NULL);
+	str = strdup(s);
+	if(!str)
+		return (NULL);
+	while(str[i])
 	{
-		p_dst[i] = p_src[i];
+		str[i] = (*f)(i, s[i]);		
 		i++;
 	}
-	return (dst);
+	return(str);
+}
+
+int main()
+{
+	char a[] = "Cez";
+
+	printf("%s\n", ft_strmapi(a, &ft_test));
 }

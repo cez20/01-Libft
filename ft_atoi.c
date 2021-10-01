@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cemenjiv <marvin@42quebec.com>             +#+  +:+       +#+        */
+/*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/24 11:45:23 by cemenjiv          #+#    #+#             */
-/*   Updated: 2021/09/26 20:06:50 by cemenjiv         ###   ########.fr       */
+/*   Updated: 2021/10/01 11:53:35 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-//"include "stdlib.h"
+
+#include "stdlib.h"
 
 int	ft_atoi(const char *str)
 {

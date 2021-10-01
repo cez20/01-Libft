@@ -6,12 +6,12 @@
 /*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 11:34:21 by cemenjiv          #+#    #+#             */
-/*   Updated: 2021/09/28 13:37:37 by cemenjiv         ###   ########.fr       */
+/*   Updated: 2021/10/01 11:52:07 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "libft.h"
-#include <stdlib.h>
+#include "libft.h"
+
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 

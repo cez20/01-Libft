@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cemenjiv <marvin@42quebec.com>             +#+  +:+       +#+        */
+/*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 14:26:04 by cemenjiv          #+#    #+#             */
-/*   Updated: 2021/09/26 19:42:57 by cemenjiv         ###   ########.fr       */
+/*   Updated: 2021/10/01 11:52:35 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "libft.h"
-#include <stdlib.h>
+#include "libft.h"
+
 
 void	*ft_memset(void *b, int c, size_t len)
 {

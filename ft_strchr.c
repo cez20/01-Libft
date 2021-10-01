@@ -6,11 +6,11 @@
 /*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/26 15:57:14 by cemenjiv          #+#    #+#             */
-/*   Updated: 2021/09/29 10:42:09 by cemenjiv         ###   ########.fr       */
+/*   Updated: 2021/10/01 11:52:27 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "libft.h" 
+#include "libft.h" 
 
 char	*ft_strchr(const char *s, int c)
 {
