@@ -6,12 +6,11 @@
 /*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/01 09:57:13 by cemenjiv          #+#    #+#             */
-/*   Updated: 2021/10/06 14:43:15 by cemenjiv         ###   ########.fr       */
+/*   Updated: 2021/10/06 14:57:59 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static char	ft_char(unsigned int i, char c)
 {
@@ -36,11 +35,4 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		i++;
 	}
 	return (str);
-}
-
-int main()
-{
-	char a[] = "Cez";
-
-	printf("%s\n", ft_strmapi(a, &ft_char));
 }
