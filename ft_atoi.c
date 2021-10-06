@@ -6,11 +6,11 @@
 /*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/24 11:45:23 by cemenjiv          #+#    #+#             */
-/*   Updated: 2021/10/01 11:53:35 by cemenjiv         ###   ########.fr       */
+/*   Updated: 2021/10/06 14:47:30 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stdlib.h"
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {

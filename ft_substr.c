@@ -6,12 +6,9 @@
 /*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 10:43:26 by cemenjiv          #+#    #+#             */
-/*   Updated: 2021/09/29 21:40:03 by cemenjiv         ###   ########.fr       */
+/*   Updated: 2021/10/06 14:49:23 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-// Est-ce que le nouveau string doit absolument contenir le nul-terminating '\0'
-// include ici-bas sera a enlevé et changer fonction strlcpy par ft_strlcpy
 
 #include "libft.h"
 

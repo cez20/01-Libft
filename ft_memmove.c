@@ -6,13 +6,11 @@
 /*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/26 19:38:17 by cemenjiv          #+#    #+#             */
-/*   Updated: 2021/10/01 11:52:51 by cemenjiv         ###   ########.fr       */
+/*   Updated: 2021/10/06 14:48:11 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {

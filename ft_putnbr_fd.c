@@ -1,37 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/26 17:27:42 by cemenjiv          #+#    #+#             */
-/*   Updated: 2021/10/06 14:41:53 by cemenjiv         ###   ########.fr       */
+/*   Created: 2021/10/05 22:31:26 by cemenjiv          #+#    #+#             */
+/*   Updated: 2021/10/06 14:50:15 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+void	ft_putnbr_fd(int n, int fd)
 {
-	size_t	total;
-	size_t	initial;
+	char			str[10];
+	unsigned int	i;
+	unsigned int	nb;
 
-	initial = size;
-	total = strlen(dst) + strlen(src);
-	while (*dst != 0 && size > 0)
+	nb = (unsigned int)n;
+	if (n < 0)
 	{
-		dst++;
-		size--;
+		write(1, "-", 1);
+		nb = -nb;
 	}
-	if (size == 0)
-		return (strlen(src) + initial);
-	while (*src != 0 && size > 1)
+	i = 0;
+	if (nb == 0)
 	{
-		*dst++ = *src++;
-		size--;
+		str[i] = '0';
+		write(1, &str[i], 1);
 	}
-	*dst = 0;
-	return (total);
-	return (0);
+	while (nb > 0)
+	{
+		str[i++] = '0' + (nb % 10);
+		nb /= 10;
+	}
+	while (i--)
+		write(fd, &str[i], 1);
 }

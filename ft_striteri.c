@@ -1,37 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/26 17:27:42 by cemenjiv          #+#    #+#             */
-/*   Updated: 2021/10/06 14:41:53 by cemenjiv         ###   ########.fr       */
+/*   Created: 2021/10/05 19:54:09 by cemenjiv          #+#    #+#             */
+/*   Updated: 2021/10/06 14:50:12 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+static void	ft_str_to_z(unsigned int i, char *str)
 {
-	size_t	total;
-	size_t	initial;
+	while (str[i] != '\0')
+	{
+		str[i] = 'Z';
+		i++;
+	}
+}
 
-	initial = size;
-	total = strlen(dst) + strlen(src);
-	while (*dst != 0 && size > 0)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+{
+	unsigned int	i;
+
+	i = 0;
+	while (s[i] != '\0')
 	{
-		dst++;
-		size--;
-	}
-	if (size == 0)
-		return (strlen(src) + initial);
-	while (*src != 0 && size > 1)
-	{
-		*dst++ = *src++;
-		size--;
-	}
-	*dst = 0;
-	return (total);
-	return (0);
+		f(i, &s[i]);
+		i++;
+	}	
 }

@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_ft_strjoin.c                                  :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/28 21:03:10 by cemenjiv          #+#    #+#             */
-/*   Updated: 2021/09/28 21:03:39 by cemenjiv         ###   ########.fr       */
+/*   Created: 2021/10/05 22:24:18 by cemenjiv          #+#    #+#             */
+/*   Updated: 2021/10/06 14:21:01 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-int main()
+void	ft_putendl_fd(char *s, int fd)
 {
-	char a[] =  "Cesar";
-	char b[] = "Menjivar";
+	char	newl;
 
-	printf("%s\n", ft_strjoin(a, b));
+	newl = '\n';
+	write(fd, s, ft_strlen(s));
+	write(fd, &newl, 1);
 }
