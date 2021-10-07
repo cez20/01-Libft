@@ -6,7 +6,7 @@
 /*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 10:43:26 by cemenjiv          #+#    #+#             */
-/*   Updated: 2021/10/06 14:49:23 by cemenjiv         ###   ########.fr       */
+/*   Updated: 2021/10/07 12:53:41 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,26 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*ptr;
-
-	ptr = (char *)malloc((len + 1) * sizeof(*ptr));
-	if (!ptr)
+	char	*str;
+	size_t 	i;
+	size_t 	j;
+	
+	if (!s)
+		return(NULL);
+	str = (char *)malloc((len + 1) * sizeof(*str));
+	if (!str)
 		return (NULL);
-	ft_strlcpy (ptr, (s + start), len + 1);
-	return (ptr);
+	i = 0;
+	j = 0;
+	while (s[i] != '\0')
+	{
+		if (i >= start && j < len)
+		{
+			str[j] = s[i];
+			j++;
+		}
+		i++;
+	}
+	str[j] = '\0';
+	return (str);
 }

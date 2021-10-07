@@ -6,13 +6,13 @@
 /*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/30 15:56:42 by cemenjiv          #+#    #+#             */
-/*   Updated: 2021/10/06 14:11:18 by cemenjiv         ###   ########.fr       */
+/*   Updated: 2021/10/07 16:26:12 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	nb_length(int n)
+static unsigned int	nb_length(long long n)
 {
 	unsigned int	length;
 
@@ -27,32 +27,35 @@ static int	nb_length(int n)
 		n = n / 10;
 		length++;
 	}
-	return (length + 1);
+	length++;
+	return (length);
 }
 
 char	*ft_itoa(int n)
 {
-	char			*ptr;
-	unsigned int	size;
+	char			*str;
+	long long		nb;
 	unsigned int	i;
+	unsigned int	size;
 
-	size = nb_length(n);
+	nb = (long long)n;
+	size = nb_length(nb);
 	i = 0;
-	ptr = (char *)malloc((size) * sizeof(ptr));
-	if (!ptr)
+	str = (char *)malloc((size) * sizeof(*str));
+	if (!str)
 		return (NULL);
-	if (n < 0)
+	if (nb < 0)
 	{
-		ptr[i++] = '-';
-		n = -n;
+		str[i] = '-';
+		nb = -nb;
 	}
 	i = size - 1;
-	while (n >= 10)
+	while (nb >= 10)
 	{
-		ptr[i--] = (n % 10 + 48);
-		n = n / 10;
+		str[i--] = (nb % 10 + 48);
+		nb = nb / 10;
 	}
-	ptr[i] = (char)(n % 10 + 48);
-	ptr[size] = '\0';
-	return (ptr);
+	str[i] = (char)(nb % 10 + 48);
+	str[size] = '\0';
+	return (str);
 }

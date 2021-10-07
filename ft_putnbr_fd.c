@@ -6,7 +6,7 @@
 /*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 22:31:26 by cemenjiv          #+#    #+#             */
-/*   Updated: 2021/10/06 14:50:15 by cemenjiv         ###   ########.fr       */
+/*   Updated: 2021/10/07 17:02:40 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@ void	ft_putnbr_fd(int n, int fd)
 {
 	char			str[10];
 	unsigned int	i;
-	unsigned int	nb;
+	long long		nb;
 
-	nb = (unsigned int)n;
-	if (n < 0)
+	nb = (long long)n;
+	if (nb < 0)
 	{
 		write(1, "-", 1);
 		nb = -nb;
@@ -30,7 +30,7 @@ void	ft_putnbr_fd(int n, int fd)
 		str[i] = '0';
 		write(1, &str[i], 1);
 	}
-	while (nb > 0)
+	while (nb != 0)
 	{
 		str[i++] = '0' + (nb % 10);
 		nb /= 10;
