@@ -6,7 +6,7 @@
 /*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/26 12:43:52 by cemenjiv          #+#    #+#             */
-/*   Updated: 2021/10/01 12:43:47 by cemenjiv         ###   ########.fr       */
+/*   Updated: 2021/10/08 13:22:34 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,18 @@
 
 char	*ft_strdup(const char *s1)
 {
-	char	*ptr;
+	unsigned int	i;
+	char			*str;
 
-	ptr = (void *)malloc(strlen(s1 + 1) * sizeof(*s1));
-	if (!ptr)
+	str = (void *)malloc((ft_strlen(s1) + 1) * sizeof(*s1));
+	if (!str)
 		return (NULL);
-	strlcpy(ptr, s1, sizeof(ptr));
-	return (ptr);
+	i = 0;
+	while (s1[i] != '\0')
+	{
+		str[i] = s1[i];
+		i++;
+	}
+	str[i] = '\0';
+	return (str);
 }

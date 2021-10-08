@@ -6,7 +6,7 @@
 /*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/01 09:57:13 by cemenjiv          #+#    #+#             */
-/*   Updated: 2021/10/06 15:59:51 by cemenjiv         ###   ########.fr       */
+/*   Updated: 2021/10/08 12:38:37 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	i = 0;
 	if (!s)
 		return (NULL);
-	str = strdup(s);
+	str = ft_strdup(s);
 	if (!str)
 		return (NULL);
 	while (str[i])

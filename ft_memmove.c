@@ -6,7 +6,7 @@
 /*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/26 19:38:17 by cemenjiv          #+#    #+#             */
-/*   Updated: 2021/10/06 14:48:11 by cemenjiv         ###   ########.fr       */
+/*   Updated: 2021/10/08 13:25:15 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	char	*p_dest;
-	char	*p_src;
+	char	*dest1;
+	char	*src1;
 
-	p_dest = dest;
-	p_src = (char *)src;
-	if (p_src < p_dest)
+	dest1 = dest;
+	src1 = (char *)src;
+	if (src1 < dest1)
 		while (n--)
-			p_dest[n] = p_src[n];
+			dest1[n] = src1[n];
 	else
 		memcpy(dest, src, n);
 	return (dest);

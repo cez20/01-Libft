@@ -6,7 +6,7 @@
 /*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/26 17:27:42 by cemenjiv          #+#    #+#             */
-/*   Updated: 2021/10/06 14:41:53 by cemenjiv         ###   ########.fr       */
+/*   Updated: 2021/10/08 12:38:03 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,14 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	initial;
 
 	initial = size;
-	total = strlen(dst) + strlen(src);
+	total = ft_strlen(dst) + ft_strlen(src);
 	while (*dst != 0 && size > 0)
 	{
 		dst++;
 		size--;
 	}
 	if (size == 0)
-		return (strlen(src) + initial);
+		return (ft_strlen(src) + initial);
 	while (*src != 0 && size > 1)
 	{
 		*dst++ = *src++;
