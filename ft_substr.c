@@ -6,7 +6,7 @@
 /*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 10:43:26 by cemenjiv          #+#    #+#             */
-/*   Updated: 2021/10/07 12:53:41 by cemenjiv         ###   ########.fr       */
+/*   Updated: 2021/10/08 11:54:12 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*str;
-	size_t 	i;
-	size_t 	j;
-	
+	size_t	i;
+	size_t	j;
+
 	if (!s)
-		return(NULL);
+		return (NULL);
 	str = (char *)malloc((len + 1) * sizeof(*str));
 	if (!str)
 		return (NULL);

@@ -6,7 +6,7 @@
 /*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/23 10:42:05 by cemenjiv          #+#    #+#             */
-/*   Updated: 2021/10/06 17:05:18 by cemenjiv         ###   ########.fr       */
+/*   Updated: 2021/10/08 11:56:07 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 			return (*(unsigned char *)&s1[i] - *(unsigned char *)&s2[i]);
 		i++;
 	}
-		return (0);
+	return (0);
 }
