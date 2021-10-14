@@ -6,7 +6,7 @@
 /*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 16:41:36 by cemenjiv          #+#    #+#             */
-/*   Updated: 2021/10/08 11:54:56 by cemenjiv         ###   ########.fr       */
+/*   Updated: 2021/10/14 10:58:14 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,17 @@
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	size_t	i;
-	char	*p_dst;
-	char	*p_src;
+	char	*dst1;
+	char	*src1;
 
+	if (!dst && !src)
+		return (NULL);
 	i = 0;
-	p_dst = (char *)dst;
-	p_src = (char *)src;
+	dst1 = (char *)dst;
+	src1 = (char *)src;
 	while (i < n)
 	{
-		p_dst[i] = p_src[i];
+		dst1[i] = src1[i];
 		i++;
 	}
 	return (dst);

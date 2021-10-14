@@ -6,7 +6,7 @@
 /*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 13:17:27 by cemenjiv          #+#    #+#             */
-/*   Updated: 2021/09/29 12:04:00 by cemenjiv         ###   ########.fr       */
+/*   Updated: 2021/10/14 10:56:56 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,26 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*ptr;
-	int		i;
-	int		j;
-	int		len;
+	char		*str;
+	size_t		i;
+	size_t		j;
+	size_t		len;
 
+	if (!s1 || !s2)
+		return (NULL);
 	i = 0;
 	j = 0;
-	len = ft_strlen(s1) + ft_strlen(s2) + 1;
-	ptr = (char *)malloc(len * sizeof(char));
-	if (!ptr)
+	len = ft_strlen(s1) + ft_strlen(s2);
+	str = (char *)malloc((len + 1) * sizeof(*str));
+	if (!str)
 		return (NULL);
 	while (s1[i] != '\0')
 	{
-		ptr[i] = s1[i];
+		str[i] = s1[i];
 		i++;
 	}
 	while (s2[j] != '\0')
-	{
-		ptr[i] = s2[j];
-		i++;
-		j++;
-	}
-	ptr[i] = '\0';
-	return (ptr);
+		str[i++] = s2[j++];
+	str[i] = '\0';
+	return (str);
 }
