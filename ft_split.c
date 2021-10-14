@@ -6,20 +6,20 @@
 /*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/10 17:33:47 by cemenjiv          #+#    #+#             */
-/*   Updated: 2021/10/10 20:15:41 by cemenjiv         ###   ########.fr       */
+/*   Updated: 2021/10/13 17:09:13 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
+#include "stdio.h"
 
-static int str_length(char const *s, char c)
+static int	nb_words_in_string(char const *s, char c)
 {
-	int	length;
+	int	nb_of_words;
 	int	i;
 	int	j;
 
-	length = 0;
+	nb_of_words = 0;
 	i = 0;
 	j = 0;
 	while (s[i] != '\0')
@@ -27,49 +27,70 @@ static int str_length(char const *s, char c)
 		if (s[i] != c)
 		{
 			while (s[i + j] != c && s[i + j] != '\0')
-			{
 				j++;
-				length++;
-			}
+			nb_of_words++;
 			i = i + (j - 1);
 			j = 0;
 		}
 		i++;
 	}
-	return (length);
+	return (nb_of_words);
 }
 
-char	*ft_split(char const *s, char c)
+static char	*copy_word(const char *s, int start, int finish)
 {
-	char 	*str;
-	int		size;
-	int 	i;
-	int 	j;
-	
-	size = str_length(s, c);
-	str  = malloc((size + 1) * sizeof(*str));
-	if (!str)
+	char	*str;
+	int		i;
+
+	i = 0;
+	str = malloc((finish - start + 1) * sizeof(*str));
+	while (start < finish)
+		str[i++] = s[start++];
+	str[i] = '\0';
+	return (str);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	size_t	i;
+	size_t	j;
+	int		index;
+	char	**split;
+
+	split = malloc((nb_words_in_string(s, c) + 1) * sizeof(char *));
+	if (!split)
 		return (NULL);
 	i = 0;
 	j = 0;
-	while (s[i])
+	index = -1;
+	while (i <= ft_strlen(s))
 	{
-		if(s[i] != c)
+		if (s[i] != c && index < 0)
+			index = i;
+		else if ((s[i] == c || i == ft_strlen(s)) && index >= 0)
 		{
-			while (s[i] != c && s[i])
-				str[j++] = s[i++];
-			i -= 1;
+			split[j++] = copy_word(s, index, i);
+			index = -1;
 		}
-		i++;	
+		i++;
 	}
-	str[j] = '\0';
-	return (str);
+	split[j] = 0;
+	return (split);
 }
 
 int main()
 {
-	char a[] = "Cesar...Cesar.?.?.Cesar";
-	char c = '.';
+	char 	a[] = "....Cesar...Cesar...";
+	char 	**b;
+	char 	c = 'C';
+	int 	i;
 
-	printf("%s\n", ft_split(a, c));
+	i = 0;
+	b = ft_split(a, c);
+	while (b[i])
+	{
+		printf("%c\n", b[i]);
+		i++;
+	}
+
 }
