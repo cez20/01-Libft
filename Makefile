@@ -6,7 +6,7 @@
 #    By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/28 13:59:50 by cemenjiv          #+#    #+#              #
-#    Updated: 2021/10/12 13:57:17 by cemenjiv         ###   ########.fr        #
+#    Updated: 2021/10/15 09:59:12 by cemenjiv         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,10 @@ SRCS			=	ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c \
 					ft_putnbr_fd.c ft_split.c
 
 OBJS			= $(SRCS:.c=.o)
+
+BONUS			= ft_lstnew.c 
+					
+BONUS_OBJS		= $(BONUS:.c=.o)
 
 CC				= gcc
 RM				= rm -f
