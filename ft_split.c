@@ -6,11 +6,12 @@
 /*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/10 17:33:47 by cemenjiv          #+#    #+#             */
-/*   Updated: 2021/10/14 10:38:58 by cemenjiv         ###   ########.fr       */
+/*   Updated: 2021/10/19 11:44:45 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static int	nb_words_in_string(char const *s, char c)
 {
@@ -81,14 +82,14 @@ char	**ft_split(char const *s, char c)
 {
 	char 	a[] = "....Cesar...Cesar...";
 	char 	**b;
-	char 	c = 'C';
+	char 	c = '.';
 	int 	i;
 
 	i = 0;
 	b = ft_split(a, c);
 	while (b[i])
 	{
-		printf("%c\n", b[i]);
+		printf("%s\n", b[i]);
 		i++;
 	}
 
