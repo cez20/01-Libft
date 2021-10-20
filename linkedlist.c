@@ -6,7 +6,7 @@
 /*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 16:08:12 by cemenjiv          #+#    #+#             */
-/*   Updated: 2021/10/19 12:04:30 by cemenjiv         ###   ########.fr       */
+/*   Updated: 2021/10/20 15:47:38 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,56 +15,69 @@
 
 typedef struct node
 {
-	int 	number;
+	void 	*number;
 	struct 	node *next;
 }			node;
 
+void	ft_lstadd_front(node **head_ref,node *new_data)
+{
+	node *new_node;
+	
+	new_node = (node *)malloc(sizeof(node));
+	
+	new_node->number = new_data;
+	new_node->next = *head_ref;
+	*head_ref = new_node;
+
+	printf("%p\n", *head_ref);
+}
+
 int main(void)
 {
-	node *list;
-	node *n;
+
+	node *n;  // le n represente l'ensemble des nodes qui seront crée
+	node *head; // list sera l'élément qui nous permettra de parcourir tous les nodes. lst pointe initialement au début de la liste. 
+	node **head1;
+	node *data;
+	int a;
+	int b;
+	int c;
 	
-	list = NULL;
-	n = malloc(sizeof(node)); // size of n is the size of node. In others words, size of an int(4 bytes) and sizeof pointer (8 bytes). Total of 12 bytes. 
+	a = 40;
+	b= 50;
+	c = 60;
+	data = (node *)&a;
+	head = NULL;
+	
+	// Création du premier node
+	n = malloc(sizeof(node)); 
 	if (n == NULL)
-		return 1; // équivalent de if(!n), return (NULL). façcon de quitter rapidement le programme si la mémoire ne peut être alloué. 
-	n->number = 1; // "n" est le premier élément de la liste. Tel que definit dans la structure, il doit recevoir un int. qui est 1
-	n->next = NULL; // l'adresse du prochain élément de la liste est NULL, ce qui veut dire que la liste ne contient qu'un seul élément. 
-	list = n; // on assigne notre pointeur list à "n", car il s'agit du point de départ de la liste.
+		return 1; 
+	n->number = (node *)&b; 
+	n->next = NULL; 
+	head = n; 
+	printf ("%p\n", head);
 
-	
+	// Creation du 2eme node
 	n = malloc(sizeof(node));
-	/*if (n == NULL)
+	printf ("%p\n", n);
+	if (n == NULL)
 	{
-		free (list); //We free list here, because if we are unable to add another element to our list, we better remove eveything we already did. 
+		free (head); 
 		return (1);
-	}*/
-	n->number = 2;
-	n->next = NULL;
-	list->next = n;
-
-	n = malloc(sizeof(node));
-	/*if (n == NULL)
-	{
-		free(list->next);  // il faut libérer l'élément antérieur vers lequel on pointe
-		free(list); // il faut aussi libérer par la suite, libérer list (il faut aller de l'élément de la chaine le plus proche vers le plus loin.  )
-		return 1;
-	}*/
-	n->number = 3;
-	n->next = NULL;
-	list->next->next = n;
-
-	for (node *tmp = list; tmp != NULL; tmp = tmp->next) 
-	{
-		printf("%d\n", tmp->number);
 	}
-	/* Boucle for. Le début est ma variable tmp de type node qui va prendre la valeur initiale de list. Tant que tmp
-	ne vaut pas NULL et on itere la variable temmp, car le pointeur tmp prendre l'adresse de list->next qui est maintenant tmp->next 
-	*/
-	while (list != NULL) // façcon de libérer la mémoire de manièere graduelle
+	n->number = (node *)&c;
+	n->next = NULL;
+	head->next = n;
+
+	head1 = &head;
+
+	ft_lstadd_front(head1, data);
+
+	// Loop qui permet d'imprimer le contenu des nodes de la linked list. 
+	for (node *tmp = head; tmp != NULL; tmp = tmp->next) 
 	{
-		node *tmp = list->next; // je suis présentement dans le 1er élément de ma liste. je crée variable temporaire qui contient adresse du 2 element
-		free(list); //je libèere le 1er élément de ma liste
-		list = tmp; //list devient l'adresse du 2eme éléments. Équivalent de list++;
-	}	
+		printf("%d\n", *(int *)tmp->number);
+	}
+
 }

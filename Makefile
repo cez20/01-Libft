@@ -6,7 +6,7 @@
 #    By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/28 13:59:50 by cemenjiv          #+#    #+#              #
-#    Updated: 2021/10/18 14:21:00 by cemenjiv         ###   ########.fr        #
+#    Updated: 2021/10/20 11:56:59 by cemenjiv         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,7 @@ SRCS			=	ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c \
 OBJS			= $(SRCS:.c=.o)
 
 BONUS			= ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
+				  ft_lstdelone.c ft_lstclear.c
 					
 BONUS_OBJS		= $(BONUS:.c=.o)
 
