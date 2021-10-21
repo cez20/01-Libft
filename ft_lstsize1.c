@@ -6,7 +6,7 @@
 /*   By: invite <invite@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 10:45:43 by cemenjiv          #+#    #+#             */
-/*   Updated: 2021/10/20 18:04:44 by invite           ###   ########.fr       */
+/*   Updated: 2021/10/20 18:00:35 by invite           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,3 +24,30 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (i); //retourne le nombre d'élément de la liste 
 }
+
+/*int main()
+{
+	t_list *node;
+	t_list *head;
+	t_list *head1;
+	int a;
+	int b;
+
+	head1= NULL;
+	a = 42;
+	b = 50;
+	
+	//Création du premier node de la liste chainé
+	node = (t_list *)malloc(sizeof(t_list));
+	node->content = (t_list *)&a;
+	head = node;
+
+	//Création de la 2e node de la liste chainée. 
+	node = (t_list *)malloc(sizeof(t_list));
+	node->content = (t_list *)&b;
+	head->next = node;
+
+	printf("Cette liste chainée devrait donnée---->%d NODE\n",ft_lstsize(head));
+	printf("Cette liste chainée devrait donnée---->%d NODE\n",ft_lstsize(head1));
+	
+}*/

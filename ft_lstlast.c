@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
+/*   By: invite <invite@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 10:50:40 by cemenjiv          #+#    #+#             */
-/*   Updated: 2021/10/20 16:04:55 by cemenjiv         ###   ########.fr       */
+/*   Updated: 2021/10/20 22:56:04 by invite           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,29 +30,33 @@ int main()
 	t_list	*node;
 	t_list	*head;
 	t_list	*tmp;
+	t_list 	*value;
 	int a = 3;
 	int b = 5;
 	int c = 42;
 	
 	node = (t_list *)malloc(sizeof(t_list));
-	node->content = (t_list *)&a;
+	node->content = &a;
 	node->next = NULL;
 	head = node;
 
 	tmp = head;
 
 	node = (t_list *)malloc(sizeof(t_list));
-	node->content = (t_list *)&b;
+	node->content = &b;
 	node->next = NULL;
 	head->next = node;
 
 	node = (t_list *)malloc(sizeof(t_list));
-	node->content = (t_list *)&c;
+	node->content = &c;
 	node->next = NULL;
 	head->next->next = node;
 
-	for (t_list *tmp = head; tmp != NULL; tmp = tmp->next) 
+	/*for (t_list *tmp = head; tmp != NULL; tmp = tmp->next) 
 	{
 		printf("%d\n", *(int *)tmp->content);
-	}
+	}*/
+
+	value = ft_lstlast(head); // j'ai mis le pointeur "t_list head*"
+	printf("%d\n", *(int *)value->content);
 }
