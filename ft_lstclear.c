@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: invite <invite@student.42.fr>              +#+  +:+       +#+        */
+/*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 11:55:22 by cemenjiv          #+#    #+#             */
-/*   Updated: 2021/10/20 18:12:55 by invite           ###   ########.fr       */
+/*   Updated: 2021/10/21 15:37:39 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,9 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	t_list *tmp;  // Création variable temporaire nommé "tmp"
-	
-	//Sécuriser la fonction. s'il n'y a pas de fonction "del", s'il n'y a pas de liste chainée et s'il n'y a pas de "list qui indique le point de départ"
-	if (lst && del) 
+	t_list	*tmp;
+
+	if (lst && del)
 	{
 		while (*lst)
 		{

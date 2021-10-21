@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: invite <invite@student.42.fr>              +#+  +:+       +#+        */
+/*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 10:45:43 by cemenjiv          #+#    #+#             */
-/*   Updated: 2021/10/20 18:04:44 by invite           ###   ########.fr       */
+/*   Updated: 2021/10/21 15:41:58 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@ int	ft_lstsize(t_list *lst)
 {
 	size_t	i;
 
-	i = 0;// i est un incrementateur qui me permet de parcourir l'ensemble des listes
-	while (lst != NULL) //Tant que le pointeur "lst" contient une adresse et qu'il ne vaut pas NULL;  
+	i = 0;
+	while (lst != NULL)
 	{
-		lst = lst->next; // pointeur "lst" prend comme adresse, l'adresse du prochain élément de la liste. 
-		i++; // on augmente le compteur de liste de 1; 
+		lst = lst->next;
+		i++;
 	}
-	return (i); //retourne le nombre d'élément de la liste 
+	return (i);
 }

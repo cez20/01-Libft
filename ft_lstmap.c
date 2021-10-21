@@ -6,7 +6,7 @@
 /*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 13:14:31 by cemenjiv          #+#    #+#             */
-/*   Updated: 2021/10/21 15:06:12 by cemenjiv         ###   ########.fr       */
+/*   Updated: 2021/10/21 15:46:07 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,15 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new;
 	t_list	*head;
-	
-	head = NULL; 
+
+	head = NULL;
 	if (lst && f && del)
 	{
-		while(lst)
+		while (lst)
 		{
-			new = (t_list *)malloc(sizeof(t_list));
-			if (!new)
+			if (!(new = (t_list *)malloc(sizeof(t_list)));
 			{
-				while(head != NULL)
+				while (head != NULL)
 				{
 					new = head->next;
 					(*del)(head->content);

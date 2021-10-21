@@ -6,7 +6,7 @@
 /*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 19:54:09 by cemenjiv          #+#    #+#             */
-/*   Updated: 2021/10/21 15:23:07 by cemenjiv         ###   ########.fr       */
+/*   Updated: 2021/10/21 15:34:29 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	unsigned int	i;
 
 	if (!s)
-		return;
+		return ;
 	i = 0;
 	while (s[i] != '\0')
 	{
