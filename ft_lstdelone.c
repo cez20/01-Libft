@@ -6,7 +6,7 @@
 /*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 11:04:58 by cemenjiv          #+#    #+#             */
-/*   Updated: 2021/10/20 11:52:31 by cemenjiv         ###   ########.fr       */
+/*   Updated: 2021/10/21 13:10:31 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,9 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	if (!del)
-		return;
-	if (lst)
+	if (lst && del)
 	{
-		(*del)(lst->content);
+		del(lst->content);
 		free(lst);
 	}	
 }

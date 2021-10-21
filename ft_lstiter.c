@@ -1,44 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/05 19:54:09 by cemenjiv          #+#    #+#             */
-/*   Updated: 2021/10/21 15:23:07 by cemenjiv         ###   ########.fr       */
+/*   Created: 2021/10/21 12:21:20 by cemenjiv          #+#    #+#             */
+/*   Updated: 2021/10/21 13:02:43 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*static void	ft_str_to_z(unsigned int i, char *str)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	while (str[i] != '\0')
+	if (lst && f)
 	{
-		str[i] = 'Z';
-		i++;
+		while (lst != NULL)
+		{
+			(*f)(lst->content);
+			lst = lst->next;
+		}
 	}
-}*/
-
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
-{
-	unsigned int	i;
-
-	if (!s)
-		return;
-	i = 0;
-	while (s[i] != '\0')
-	{
-		f(i, &s[i]);
-		i++;
-	}	
 }
-
-/*int main ()
-{
-	char str[] = "Cesar";
-
-	ft_striteri(str, &ft_str_to_z);
-	printf("%s\n", str);
-}*/
