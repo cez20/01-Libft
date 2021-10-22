@@ -6,7 +6,7 @@
 /*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/10 17:33:47 by cemenjiv          #+#    #+#             */
-/*   Updated: 2021/10/21 15:22:26 by cemenjiv         ###   ########.fr       */
+/*   Updated: 2021/10/22 09:06:03 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,16 +50,12 @@ static char	*copy_word(const char *s, int start, int finish)
 	return (str);
 }
 
-char	**ft_split(char const *s, char c)
+static char	**ft_add_content(const char *s, char **split, char c)
 {
 	size_t	i;
 	size_t	j;
 	int		index;
-	char	**split;
 
-	split = malloc((nb_words_in_string(s, c) + 1) * sizeof(char *));
-	if (!split)
-		return (NULL);
 	i = 0;
 	j = 0;
 	index = -1;
@@ -78,19 +74,15 @@ char	**ft_split(char const *s, char c)
 	return (split);
 }
 
-/*int main()
+char	**ft_split(char const *s, char c)
 {
-	char 	a[] = "....Cesar...Cesar...";
-	char 	**b;
-	char 	c = '.';
-	int 	i;
+	char	**split;
 
-	i = 0;
-	b = ft_split(a, c);
-	while (b[i])
-	{
-		printf("%s\n", b[i]);
-		i++;
-	}
-
-}*/
+	if (!s)
+		return (NULL);
+	split = malloc((nb_words_in_string(s, c) + 1) * sizeof(char *));
+	if (!split)
+		return (NULL);
+	ft_add_content(s, split, c);
+	return (split);
+}
