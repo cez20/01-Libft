@@ -6,12 +6,11 @@
 /*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 12:46:47 by cemenjiv          #+#    #+#             */
-/*   Updated: 2021/10/21 15:40:50 by cemenjiv         ###   ########.fr       */
+/*   Updated: 2021/10/24 13:56:51 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 t_list	*ft_lstnew(void *content)
 {
