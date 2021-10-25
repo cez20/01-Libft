@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
+/*   By: invite <invite@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/26 17:27:42 by cemenjiv          #+#    #+#             */
-/*   Updated: 2021/10/08 12:38:03 by cemenjiv         ###   ########.fr       */
+/*   Updated: 2021/10/24 23:33:55 by invite           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,4 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	}
 	*dst = 0;
 	return (total);
-	return (0);
 }
