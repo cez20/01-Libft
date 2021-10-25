@@ -6,12 +6,11 @@
 /*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/10 17:33:47 by cemenjiv          #+#    #+#             */
-/*   Updated: 2021/10/22 09:06:03 by cemenjiv         ###   ########.fr       */
+/*   Updated: 2021/10/25 17:11:08 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static int	nb_words_in_string(char const *s, char c)
 {
