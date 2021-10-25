@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/24 13:04:42 by cemenjiv          #+#    #+#             */
-/*   Updated: 2021/10/22 09:12:34 by cemenjiv         ###   ########.fr       */
+/*   Created: 2021/10/25 15:15:51 by cemenjiv          #+#    #+#             */
+/*   Updated: 2021/10/25 15:19:21 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <unistd.h>
 # include <string.h>
 
-typedef struct	s_list
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;

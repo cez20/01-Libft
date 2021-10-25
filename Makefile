@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: invite <invite@student.42.fr>              +#+  +:+       +#+         #
+#    By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/28 13:59:50 by cemenjiv          #+#    #+#              #
-#    Updated: 2021/10/24 23:07:43 by invite           ###   ########.fr        #
+#    Updated: 2021/10/25 15:04:12 by cemenjiv         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,9 +26,11 @@ BONUS			= ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back
 					
 BONUS_OBJS		= $(BONUS:.c=.o)
 
+NORM 			= norminette
+
 CC				= gcc
-RM				= rm -f
 CFLAGS			= -Wall -Wextra -Werror
+RM				= rm -f
 
 NAME			= libft.a
 
