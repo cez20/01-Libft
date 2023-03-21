@@ -1,8 +1,9 @@
 # Don't track content of these folder
 
-*.o
+objs/*.o
 .DS_Store
 libftTester
 libft-war-machine
 a.out
 libft-unit-test
+libft.a
