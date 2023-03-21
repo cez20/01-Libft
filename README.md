@@ -12,6 +12,6 @@ This Project aims to introduce 42 students to the highly useful standard functio
 
 ``make bonus`` : compiles library with bonus functions
 
-# Exemple of compilation
+# Compilation Exemple
 
 ![Example Image](doc/compilation.png)
