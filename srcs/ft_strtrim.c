@@ -6,11 +6,11 @@
 /*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 22:03:12 by cemenjiv          #+#    #+#             */
-/*   Updated: 2023/03/20 21:16:57 by cemenjiv         ###   ########.fr       */
+/*   Updated: 2023/05/17 22:13:04 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "../include/libft.h"
 
 static int	ft_strchr_in_set(char c, char const *set)
 {

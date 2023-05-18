@@ -6,11 +6,11 @@
 /*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 12:08:54 by cemenjiv          #+#    #+#             */
-/*   Updated: 2023/03/20 21:16:57 by cemenjiv         ###   ########.fr       */
+/*   Updated: 2023/05/17 22:13:04 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "../include/libft.h"
 
 void	ft_lstadd_back(t_list **alst, t_list *new)
 {

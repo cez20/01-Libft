@@ -6,7 +6,7 @@
 #    By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/28 13:59:50 by cemenjiv          #+#    #+#              #
-#    Updated: 2023/03/20 21:15:16 by cemenjiv         ###   ########.fr        #
+#    Updated: 2023/04/02 15:06:26 by cemenjiv         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,6 +41,12 @@ RM				= rm -rf
 
 NAME			= libft.a
 
+CC				= gcc
+CFLAGS			= -Wall -Wextra -Werror
+RM				= rm -rf
+
+NAME			= libft.a
+
 all:			objs $(NAME)
 
 $(NAME):		$(OBJS)
@@ -61,4 +67,4 @@ bonus:			all $(BONUS_OBJS)
 objs:			
 				mkdir -p objs			
 
-.PHONY:			all clean fclean re bonus
+.PHONY:			all clean fclean re 
