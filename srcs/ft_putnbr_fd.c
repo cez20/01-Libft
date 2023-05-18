@@ -6,11 +6,11 @@
 /*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 22:31:26 by cemenjiv          #+#    #+#             */
-/*   Updated: 2023/05/17 22:13:04 by cemenjiv         ###   ########.fr       */
+/*   Updated: 2023/05/18 00:20:11 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/libft.h"
+#include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {

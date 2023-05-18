@@ -6,7 +6,7 @@
 #    By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/28 13:59:50 by cemenjiv          #+#    #+#              #
-#    Updated: 2023/04/02 15:06:26 by cemenjiv         ###   ########.fr        #
+#    Updated: 2023/05/18 00:19:54 by cemenjiv         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ BONUS_OBJS		= $(patsubst $(SRCS_DIR)%.c, $(OBJS_DIR)%.o, $(SRCS_BONUS))
 
 
 $(OBJS_DIR)%.o: $(SRCS_DIR)%.c
-				$(CC) ${CFLAGS}  -c $< -o $@
+				$(CC) ${CFLAGS} -Iinclude/  -c $< -o $@
 
 CC				= gcc
 CFLAGS			= -Wall -Wextra -Werror
