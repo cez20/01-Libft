@@ -14,4 +14,4 @@ This Project aims to introduce 42 students to the highly useful standard functio
 
 # Compilation Exemple
 
-![Example Image](doc/compilation.png)
+![Example Image](images/compilation.png)
